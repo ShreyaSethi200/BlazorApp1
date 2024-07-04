@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{D7A36576-B5A8-40A6-BE6D-1D5C00900546}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArithmeticEvaluator.Tests", "ArithmeticEvaluator.Tests\ArithmeticEvaluator.Tests.csproj", "{812300BC-34A2-4D57-B801-A12B52B5D9B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7A36576-B5A8-40A6-BE6D-1D5C00900546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A36576-B5A8-40A6-BE6D-1D5C00900546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A36576-B5A8-40A6-BE6D-1D5C00900546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A36576-B5A8-40A6-BE6D-1D5C00900546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812300BC-34A2-4D57-B801-A12B52B5D9B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812300BC-34A2-4D57-B801-A12B52B5D9B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812300BC-34A2-4D57-B801-A12B52B5D9B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812300BC-34A2-4D57-B801-A12B52B5D9B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F323E79A-A8CA-4968-A104-E2EEABE1F974}
+	EndGlobalSection
+EndGlobal

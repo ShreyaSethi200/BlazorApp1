@@ -1,0 +1,36 @@
+﻿@page "/log"
+@using BlazorApp.Services
+@inject ILoggingService LoggingService
+@inject NavigationManager NavigationManager
+
+<h3>Log</h3>
+
+@if (logs != null && logs.Any())
+{
+    <ul>
+        @foreach (var log in logs)
+        {
+            <li>@log</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No logs available.</p>
+}
+
+<button class="btn btn-primary" @onclick="NavigateBack">Back to Main Page</button>
+
+@code {
+    private List<string> logs;
+
+    protected override void OnInitialized()
+    {
+        logs = LoggingService.GetLogs();
+    }
+
+    private void NavigateBack()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}

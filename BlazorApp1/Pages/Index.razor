@@ -1,0 +1,45 @@
+﻿@page "/"
+
+@using BlazorApp.Services
+@inject ILoggingService LoggingService
+@inject IArithmeticService ArithmeticService
+
+
+<PageTitle>Arithmetic Evaluator</PageTitle>
+
+<h3>Enter an Expression to Evaluate</h3>
+
+<EditForm Model="this">
+    <InputText @bind-Value="Expression" placeholder="e.g., 2+2" />
+    <button type="button" @onclick="EvaluateExpression">Evaluate</button>
+</EditForm>
+
+@if (!string.IsNullOrEmpty(Result))
+{
+    <p>Result: <strong>@Result</strong></p>
+}
+
+<a href="/log">View Log</a>
+
+@code {
+    private string Expression { get; set; }
+    private string Result { get; set; }
+
+    private void EvaluateExpression()
+    {
+        try
+        {
+            // Evaluate the expression and convert the result to words
+            int sum = ArithmeticService.Evaluate(Expression);
+            Result = ArithmeticService.ConvertToWords(sum);
+
+            // Log the operation
+            LoggingService.LogOperation(Expression, Result);
+        }
+        catch (Exception ex)
+        {
+            // Handle any errors (e.g., invalid input)
+            Result = $"Error: {ex.Message}";
+        }
+    }
+}
